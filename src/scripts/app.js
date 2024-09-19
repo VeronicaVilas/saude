@@ -6,13 +6,17 @@ function calcularIMC() {
         let categoria = '';
 
         if (imc < 18.5) {
-            categoria = 'Baixo peso';
-        } else if (imc < 24.9) {
-            categoria = 'Peso normal';
-        } else if (imc < 29.9) {
-            categoria = 'Sobrepeso';
+            categoria = 'Abaixo do peso';
+        } else if (imc >= 18.6 && imc <= 24.9) {
+            categoria = 'Peso ideal';
+        } else if (imc >= 25.0 && imc <= 29.9) {
+            categoria = 'Levemente acima do peso';
+        } else if (imc >= 30 && imc <= 34.9) {
+            categoria = 'Obesidade grau I';
+        } else if (imc >= 35 && imc <= 39.9) {
+            categoria = 'Obesidade grau II';
         } else {
-            categoria = 'Obesidade';
+            categoria = 'Obesidade grau III';
         }
 
         document.getElementById('imc-valor').textContent = `Seu IMC é: ${imc.toFixed(2)}`;

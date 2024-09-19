@@ -76,7 +76,7 @@ header .navbar a:hover {
     color: var(--main-color);
 }
 
-header .icons button {
+header .icons .btn {
     display: inline-block;
     border-radius: 5rem;
     background: var(--main-color);
