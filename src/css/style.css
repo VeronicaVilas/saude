@@ -614,6 +614,12 @@ header .icons button:hover {
     
 }
 
+@media (max-width:765px) {
+    .contact .row .image{
+        display: none;
+    }
+}
+
 @media (max-width:450px) {
     html {
         font-size: 50%;
