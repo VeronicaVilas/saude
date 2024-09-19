@@ -43,9 +43,13 @@ function toggleExplanation(event) {
 }
 
 function openModal(modalId) {
+    console.log('Abrindo modal:', modalId);
     document.getElementById(modalId).classList.remove('hidden');
+    document.body.classList.add('no-scroll');
 }
 
 function closeModal(modalId) {
+    console.log('Fechando modal:', modalId);
     document.getElementById(modalId).classList.add('hidden');
+    document.body.classList.remove('no-scroll');
 }
