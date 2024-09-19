@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vida em equilíbrio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body>
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+        <a href="#" class="logo">VIDA EM EQUILÍBRIO<span>.</span></a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">Sobre</a>
+            <a href="#contact">Calculo de IMC</a>
+            <a href="#products">Informações populares</a>
+        </nav>
+        <div class="icons">
+            <button href="#contact">Calcular IMC</button>
+        </div>
+    </header>
+    <section class="home" id="home">
+        <div class="content">
+            <h3>Vida Saudável</h3>
+            <span>Bem-Estar Diário</span>
+            <p>Bem-vindo ao nosso site dedicado ao seu bem-estar! Aqui você encontrará dicas úteis sobre alimentação equilibrada, atividades físicas e cuidados com a saúde mental. Explore nossas seções para descobrir como adotar hábitos saudáveis e melhorar sua qualidade de vida.</p>
+            <a href="#products" class="btn">Compre agora</a>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <h1 class="heading"><span>Sobre</span> nos</h1>
+        <div class="row">
+            <div class="video-container">
+                <img src="https://static.vecteezy.com/ti/fotos-gratis/t2/26517678-verde-bokeh-em-natureza-desfocar-arte-abstrato-borrao-fundo-ai-generativo-gratis-foto.jpg" alt="gif de amigurumi">
+                <h3>Cuide de você</h3>
+                <h2>Cuide da sua saúde</h2>
+            </div>
+            <div class="content">
+                <h3>Por Que Cuidar da Sua Saúde?</h3>
+                <p>A saúde e os cuidados pessoais desempenham um papel fundamental no nosso bem-estar geral e qualidade de vida. Cuidar de si mesmo não é apenas uma questão de evitar doenças, mas também de promover um estado de equilíbrio físico, mental e emocional. Esse equilíbrio é crucial para viver uma vida plena e satisfatória.</p>
+                <p>Este site foi criado com o objetivo de proporcionar informações valiosas e práticas sobre saúde e cuidados pessoais. Nossa missão é educar e inspirar nossos visitantes a adotarem hábitos saudáveis que promovam uma vida equilibrada e satisfatória.</p>
+                <a href="#products" class="btn">Saiba mais</a>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <h1 class="heading"><span>Calculadora </span>de IMC</h1>
+        <div class="row">
+            <div class="image">
+                <p>O Índice de Massa Corporal (IMC) é uma medida que avalia a relação entre o peso e a altura de uma pessoa para classificar seu estado de saúde em categorias como baixo peso, peso normal, sobrepeso e obesidade.</p> 
+                <p><span>Calcule o seu IMC ao lado ➪</span></p>
+            </div>
+            <form id="imc-form" class="formulario">
+                <label for="peso" class="box-label">Peso (kg):</label>
+                <input type="number" id="peso" class="box" required>
+                <label for="altura" class="box-label">Altura (m):</label>
+                <input type="number" step="0.01" id="altura" class="box" required>
+                <button type="button" class="btn" onclick="calcularIMC()">Calcular IMC</button>
+            </form>
+            <div id="resultado" class="resultado" style="display:none;">
+                <p id="imc-valor"></p>
+                <p id="categoria"></p>
+                <button id="calcular-novamente" class="btn" onclick="mostrarFormulario()" style="display:none;">Calcular Novamente</button>
+            </div>
+        </div>
+    </section>
+    <section class="products" id="products">
+        <h1 class="heading"><span>Informações </span>populares</h1>
+        <div class="box-container">
+            <div class="box">
+                <div class="content">
+                    <h3>Alimentação Saudável</h3>
+                    <p>Manter uma dieta equilibrada é essencial para promover a saúde geral e o bem-estar. Uma alimentação balanceada garante que seu corpo receba todos os nutrientes necessários para funcionar de maneira ideal. Clique abaixo para ver mais dicas.</p>
+                    <a class="btn" href="#" onclick="openModal('modal-alimentacao')">Saiba mais</a>
+                </div>
+            </div>
+            <div id="modal-alimentacao" class="modal hidden">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal-alimentacao')">&times;</span>
+                    <p>Aqui estão algumas dicas valiosas para ajudar você a manter uma dieta equilibrada:</p>
+                    <p><strong>1. Inclua uma Variedade de Alimentos</strong></p>
+                    <p>Para garantir uma ingestão adequada de nutrientes, é importante incluir uma ampla gama de alimentos em sua dieta. Consuma frutas e vegetais variados, cereais integrais, proteínas magras e fontes saudáveis de gordura. Cada grupo alimentar oferece diferentes vitaminas e minerais essenciais para o corpo.</p>
+                    <p><strong>2. Prefira Alimentos Integrais</strong></p>
+                    <p>Opte por alimentos integrais em vez de processados. Alimentos integrais, como grãos integrais, frutas frescas e vegetais, são ricos em fibras, vitaminas e minerais. Eles ajudam a manter a saciedade por mais tempo e proporcionam uma liberação gradual de energia.</p>
+
+                    <p><strong>3. Controle as Porções</strong></p>
+                    <p>Preste atenção ao tamanho das porções para evitar o consumo excessivo de calorias. Utilizar pratos menores e comer devagar pode ajudar a controlar a quantidade de alimento ingerido e permitir que seu corpo sinalize quando está satisfeito.</p>
+
+                    <p><strong>4. Mantenha-se Hidratado</strong></p>
+                    <p>A hidratação é fundamental para a saúde geral. Beba bastante água ao longo do dia para manter o corpo hidratado e apoiar funções metabólicas. Evite bebidas açucaradas e alcoólicas, que podem contribuir para o ganho de peso e desidratação.</p>
+
+                    <p><strong>5. Equilibre Macronutrientes</strong></p>
+                    <p>Certeza de que sua dieta inclua um equilíbrio adequado de macronutrientes: carboidratos, proteínas e gorduras. Carboidratos fornecem energia, proteínas são essenciais para a construção e reparo dos tecidos, e gorduras saudáveis, como as encontradas em abacates e nozes, ajudam na absorção de vitaminas.</p>
+
+                    <p><strong>6. Inclua Fontes de Nutrientes Essenciais</strong></p>
+                    <p>Consuma alimentos ricos em vitaminas e minerais essenciais, como frutas cítricas, vegetais de folhas verdes e produtos lácteos. As fibras são importantes para a digestão e para manter níveis saudáveis de colesterol. Encontre ácidos graxos ômega-3 em peixes gordurosos e sementes de chia.</p>
+                    <button  onclick="closeModal('modal-alimentacao')" class="btn-close">Fechar</button>
+                </div>
+            </div>
+        </div>
+        <div class="box-container">
+            <div class="box">
+                <div class="content">
+                    <h3>Exercícios Físicos</h3>
+                    <p>O exercício físico desempenha um papel fundamental na manutenção da saúde e bem-estar geral. A prática regular de atividades físicas ajuda a fortalecer o sistema cardiovascular, melhorar a circulação sanguínea e aumentar a capacidade pulmonar, o que contribui para um melhor funcionamento do coração e dos pulmões. Clique abaixo para ver mais dicas.</p>
+                    <a class="btn" href="#" onclick="openModal('modal-exercicios')">Saiba mais</a>
+                </div>
+            </div>
+            <div id="modal-exercicios" class="modal hidden">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal-exercicios')">&times;</span>
+                    <p>A atividade física também desempenha um papel crucial na manutenção da saúde óssea e muscular, reduzindo o risco de osteoporose e promovendo uma melhor postura e flexibilidade. Psicologicamente, o exercício físico libera endorfinas, neurotransmissores que ajudam a reduzir o estresse, a ansiedade e os sintomas de depressão, promovendo um estado geral de bem-estar e melhorando a qualidade do sono. Incorporar o exercício à rotina diária não só melhora a saúde física, mas também contribui para um estilo de vida mais equilibrado e satisfatório.  Além disso, o exercício é essencial para o controle do peso corporal, ajudando a prevenir e gerenciar condições como a obesidade e o diabetes tipo 2.</p>
+                    <p><strong>Para Iniciantes:</strong></p>
+                    <p>Se você está começando agora sua jornada no exercício físico, é importante começar com atividades que ajudem a construir uma base sólida e desenvolvam resistência. Caminhadas rápidas e exercícios de baixo impacto, como yoga ou pilates, são ótimas opções para quem está começando. Essas atividades ajudam a melhorar a flexibilidade, a força do core e a resistência cardiovascular sem sobrecarregar as articulações. Além disso, incorporar treinos leves com o próprio peso corporal, como agachamentos e flexões modificadas, pode ser uma boa maneira de iniciar o fortalecimento muscular.</p>
+
+                    <p><strong>Para Intermediários:</strong></p>
+                    <p>Se você já possui alguma experiência com atividades físicas, pode começar a diversificar seus treinos e aumentar a intensidade. Experimentos com treinos de força utilizando pesos livres, como halteres e kettlebells, podem ajudar a construir músculos e melhorar a definição corporal. Corridas moderadas, ciclismo e natação são excelentes para aumentar a capacidade cardiovascular e queimar calorias. Incorporar treinos intervalados de alta intensidade (HIIT) pode ser uma forma eficaz de aumentar a resistência e a eficiência do metabolismo.</p>
+
+                    <p><strong>Para Avançados:</strong></p>
+                    <p>Para aqueles que já têm uma base sólida de condicionamento físico e buscam desafios mais complexos, é recomendável seguir um programa de treinamento estruturado e específico. Atividades como levantamento de peso olímpico, treinos de força avançados e competições de esportes podem proporcionar novos desafios e metas. A prática de exercícios de resistência, como maratonas e triatlos, pode ajudar a atingir níveis elevados de desempenho cardiovascular e muscular. Além disso, a incorporação de técnicas de recuperação avançadas, como alongamento profundo e massagens terapêuticas, pode otimizar a recuperação e o desempenho geral.</p>
+
+                    <button  onclick="closeModal('modal-exercicios')" class="btn-close">Fechar</button>
+                </div>
+            </div>
+        </div>
+        <div class="box-container">
+            <div class="box">
+                <<div class="content">
+                    <h3>Saúde Mental</h3>
+                    <p>Cuidar da saúde mental é essencial para o bem-estar geral e para enfrentar os desafios diários com mais eficácia. Técnicas de gerenciamento de estresse e práticas de bem-estar emocional podem fazer uma grande diferença. Clique abaixo para ver mais dicas.</p>
+                    <a class="btn" href="#" onclick="openModal('modal-saude-mental')">Saiba mais</a>
+                </div>
+            </div>
+            <div id="modal-saude-mental" class="modal hidden">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal-saude-mental')">&times;</span>
+                    <p>Aqui estão algumas dicas valiosas para promover a saúde mental:</p>
+                    <p><strong>1. Pratique Técnicas de Relaxamento</strong></p>
+                    <p>Incorpore técnicas de relaxamento na sua rotina, como meditação, respiração profunda e mindfulness. Essas práticas ajudam a reduzir o estresse e a ansiedade, promovendo uma sensação de calma e clareza mental.</p>
+                    
+                    <p><strong>2. Mantenha uma Rotina Regular</strong></p>
+                    <p>Ter uma rotina diária estruturada pode ajudar a trazer uma sensação de estabilidade e controle. Estabeleça horários regulares para dormir, comer e realizar atividades, e reserve um tempo para lazer e autocuidado.</p>
+                    
+                    <p><strong>3. Envolva-se em Atividades Prazerosas</strong></p>
+                    <p>Dedique tempo para atividades que você gosta e que trazem prazer, como hobbies, esportes ou encontrar amigos. Engajar-se em atividades agradáveis pode melhorar seu humor e ajudar a combater sentimentos de tristeza ou estresse.</p>
+                    
+                    <p><strong>4. Mantenha Conexões Sociais</strong></p>
+                    <p>Manter relações sociais positivas e de apoio é fundamental para a saúde mental. Converse com amigos, familiares ou participe de grupos e comunidades que compartilhem interesses semelhantes.</p>
+                    
+                    <p><strong>5. Procure Ajuda Profissional Quando Necessário</strong></p>
+                    <p>Se você sentir que está enfrentando dificuldades que não consegue lidar sozinho, procurar a ajuda de um profissional de saúde mental, como um psicólogo ou psiquiatra, pode ser uma escolha importante. Eles podem oferecer suporte e estratégias para enfrentar desafios emocionais e mentais.</p>
+                    
+                    <p><strong>6. Priorize o Autocuidado</strong></p>
+                    <p>Reserve um tempo para cuidar de si mesmo e de suas necessidades emocionais. Atividades como uma boa alimentação, exercícios regulares e momentos de relaxamento são importantes para manter a saúde mental em equilíbrio.</p>
+                    <button onclick="closeModal('modal-saude-mental')" class="btn-close">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="credit">
+            Criado por: <span>Verônica Vilas</span> |
+            <a href="https://github.com/VeronicaVilas" class="fa-brands fa-github"></a>
+            <a href="https://www.linkedin.com/in/ver%C3%B4nica-vilas-b23242209/" class="fa-brands fa-linkedin-in"></a>
+        </div>
+    </section>
+    <script src="/src/scripts/app.js"></script>
+</body>
+</html>
