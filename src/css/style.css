@@ -425,18 +425,18 @@ header .icons button:hover {
     color: #999;
 }
 
-.contact {
+.imc {
     background: #eee;
 }
 
-.contact .row {
+.imc .row {
     display: flex;
     flex-wrap: wrap-reverse;
     gap: 1.5rem;
     align-items: center;
 }   
 
-.contact .row form {    
+.imc .row form {    
     flex: 1 1 40rem;
     padding: 2rem 2.5rem;
     box-shadow: 0 0.5rem 1rem rgba(51, 255, 68, 0.3);
@@ -446,31 +446,31 @@ header .icons button:hover {
 
 }
 
-.contact .row .image{
+.imc .row .info{
     font-size: 1.7rem;
     color: var(--text-color2-gray2);
     width: 50%;
 }
 
-.contact .row .image p {
+.imc .row .info p {
     margin-top: 2rem;
     text-align: center;
 }
 
-.contact .row .image span{
+.imc .row .info span{
     font-size: 2rem;
     font-style: bold;
     color: var(--main-color);
     margin-top: 20px;
 }
 
-.contact .row  form .box-label {
+.imc .row  form .box-label {
     font-size: 1.7rem;
     color: var(--text-color-gray);
     margin: 1rem 0;
 }
 
-.contact .row  form .box {
+.imc .row  form .box {
     padding: 1rem;
     font-size: 1.7rem;
     color: var(--main-color);
@@ -481,11 +481,11 @@ header .icons button:hover {
     width: 100%;
 }
 
-.contact .row  form .box:focus {
+.imc .row  form .box:focus {
     border-color: var(--main-color);
 }
 
-.contact .row .resultado {    
+.imc .row .resultado {    
     flex: 1 1 40rem;
     padding: 2rem 2.5rem;
     box-shadow: 0 0.5rem 1rem rgba(51, 255, 68, 0.3);
@@ -494,7 +494,7 @@ header .icons button:hover {
     border-radius: 0.5rem;
 }
 
-.contact .row .resultado p {    
+.imc .row .resultado p {    
     font-size: 1.7rem;
     color: var(--text-color-gray);
     margin: 1rem 0;
@@ -615,7 +615,7 @@ header .icons button:hover {
 }
 
 @media (max-width:765px) {
-    .contact .row .image{
+    .imc .row .image{
         display: none;
     }
 }
